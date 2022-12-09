@@ -84,6 +84,7 @@
     var IS_MOBILE = window.navigator.userAgent.indexOf('Mobi') > -1 || IS_IOS;
     /** @const */
     var IS_TOUCH_ENABLED = 'ontouchstart' in window;
+
     /**
     * Default game configuration.
     * @enum {number}
@@ -132,13 +133,13 @@
     */
     Runner.imageSources = {
     LDPI: [
-    {name: 'CACTUS_LARGE', id: '1x-obstacle-large'},
-    {name: 'CACTUS_SMALL', id: '1x-obstacle-small'},
-    {name: 'CLOUD', id: '1x-cloud'},
-    {name: 'HORIZON', id: '1x-horizon'},
-    {name: 'RESTART', id: '1x-restart'},
-    {name: 'TEXT_SPRITE', id: '1x-text'},
-    {name: 'TREX', id: '1x-trex'}
+    {name: 'CACTUS_LARGE', id: '2x-obstacle-large'},
+    {name: 'CACTUS_SMALL', id: '2x-obstacle-small'},
+    {name: 'CLOUD', id: '2x-cloud'},
+    {name: 'HORIZON', id: '2x-horizon'},
+    {name: 'RESTART', id: '2x-restart'},
+    {name: 'TEXT_SPRITE', id: '2x-text'},
+    {name: 'TREX', id: '2x-trex'}
     ],
     HDPI: [
     {name: 'CACTUS_LARGE', id: '2x-obstacle-large'},
@@ -2462,9 +2463,6 @@ html[subframe] body {
 
 <body id="t">
 <div id="main-frame-error" class="interstitial-wrapper" jstcache="0">
-    
-    
-	<div id="main-frame-notchrome" style="display:none; margin-top:50px;"><p style="text-align:center">Tahle hra běží bohužel jen na Chrome prohlížeči :(</p></div>
     <div id="offline-resources" jstcache="0">
     <div id="offline-resources-1x" jstcache="0">
       <img id="1x-obstacle-large" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAAyCAMAAACJUtIoAAAACVBMVEX////39/dTU1OabbyfAAAAAXRSTlMAQObYZgAAAXhJREFUeF7t2NGqAjEMANGM///RlwvaYQndULuFPJgHUYaEI6IPhgNAOA8HZ+3U6384F5y1U6YzAZTWG+dZamnFEstBFtCKJZSHWMADLJ18z+JqpQeLdKoDC8siC5iFCQs4znIxB5B1t6F3lQWkL4N0JsF+u6GXJdbI+FKW+yWr3lhgCZ2VSag3Nlk/FnRkIRbasLCO0oulikMsvmGpeiGLZ1jOMgtIP5bODivYYUXEIVbwFCt4khVssRgsgidZwQaLd2A8m7MYLGTl4KeQQs2y4kMAMGGlmQViDIb5O6xZnnLD485dIBzqDSE1yyFdL4Iqu4XJqUUWl/NVAFSZq1P6a5aqbAUM2epQbBioWflUBABiUyhYyZoCBev8XyMAObDNOhOAfiyxmHU0YNlldGAphGjFCjA3YkUn1o/1Y3EkZFZ5isCC6NUgwDBn1RuXH96doNfAhDXfsIyJ2AnolcCVhay0kcYbW0HvCO8OwIcJ3GzkORpkFuUP/1Ec8FW1qJkAAAAASUVORK5CYII=" jstcache="0">
@@ -2492,13 +2490,8 @@ html[subframe] body {
   </div>
 
   <script type="text/javascript">
-    if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
       new Runner('.interstitial-wrapper');
-    } else {
-      document.getElementById("main-frame-notchrome").style.display="";
-	}
   </script>
 
 
 </body>
-
